@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="718" viewBox="0 0 1080 718" role="img" aria-labelledby="title description">
+  <title id="title">Robot home position and MRI-to-robot transform</title>
+  <desc id="description">Side and end views of the right-handed robot frame. The shaft and nominal needle line intersect at the origin. Markers in robot coordinates in millimetres are M1 (0, -60, -100), M2 (0, 0, -100), and M3 (0, -10, -20). Positive translation follows positive z, positive rotation follows the right-hand rule about z, and positive insertion follows the 45-degree guide toward negative y and positive z.</desc>
+  <defs>
+    <marker id="axis" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#34485c" d="M0 0 L10 5 L0 10 Z"/></marker>
+    <marker id="joint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#08766e" d="M0 0 L10 5 L0 10 Z"/></marker>
+  </defs>
+  <rect width="1080" height="718" fill="white"/>
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#192f44">
+    <text x="44" y="53" font-size="36" font-weight="bold">Robot home position</text>
+    <text x="45" y="88" font-size="19">Home settings: translation t = 0 mm, shaft rotation θ = 0°, needle insertion d = 0 mm.</text>
+    <path d="M44 112 H1036 M660 142 V491" stroke="#cad4d9" stroke-width="1.5"/>
+    <text x="45" y="155" font-size="23" font-weight="bold">Side view</text>
+    <text x="45" y="183" font-size="17">Needle and markers lie in the yz plane.</text>
+    <text x="695" y="155" font-size="23" font-weight="bold">End view</text>
+    <text x="695" y="183" font-size="17">Looking from +z toward the origin.</text>
+    <rect x="86" y="246.5" width="460" height="87" rx="36" fill="#e8eff2" stroke="#b7c7d0" stroke-width="2"/>
+    <path d="M124 290 V464" fill="none" stroke="#93a5af" stroke-width="4"/>
+    <g fill="none" stroke="#34485c" stroke-width="2.4" marker-end="url(#axis)">
+      <path d="M78 290 H603"/><path d="M414 290 V201"/>
+      <path d="M848 320 H964"/><path d="M848 320 V213"/>
+    </g>
+    <g fill="none" stroke="#08766e" stroke-width="3.6" marker-end="url(#joint)">
+      <path d="M467 247 H555"/><path d="M414 290 L531 407"/>
+      <path d="M908 320 A60 60 0 0 0 848 260"/>
+    </g>
+    <g fill="#08766e" font-size="17" font-weight="bold">
+      <text x="468" y="235">+t translation</text><text x="494" y="436">+d insertion</text>
+      <text x="909" y="267">+θ</text>
+    </g>
+    <path d="M465 290 A51 51 0 0 1 450.06 326.06" stroke="#667689" stroke-width="1.5" fill="none"/>
+    <text x="471" y="317" font-size="16">45°</text>
+    <g font-size="18" font-weight="bold">
+      <text x="424" y="212">+y</text><text x="607" y="296">+z</text>
+      <text x="970" y="326">+x</text><text x="858" y="222">+y</text>
+    </g>
+    <g fill="#b24924" stroke="white" stroke-width="2">
+      <circle cx="124" cy="464" r="7.5"/><circle cx="124" cy="290" r="7.5"/><circle cx="356" cy="319" r="7.5"/>
+    </g>
+    <g font-size="16" font-weight="bold" fill="#893c20">
+      <text x="138" y="469">M1  (0, −60, −100)</text>
+      <text x="90" y="274">M2  (0, 0, −100)</text>
+      <text x="225" y="354">M3  (0, −10, −20)</text>
+    </g>
+    <path d="M350 324 L335 337" stroke="#a36246" stroke-width="1.2"/>
+    <circle cx="414" cy="290" r="8" fill="white" stroke="#34485c" stroke-width="2"/>
+    <path d="M409 285 L419 295 M419 285 L409 295" stroke="#34485c" stroke-width="2"/>
+    <path d="M409 282 L387 252 H365" fill="none" stroke="#52687a" stroke-width="1.4"/>
+    <text x="225" y="247" font-size="16" font-weight="bold">Origin (0, 0, 0)</text>
+    <circle cx="848" cy="320" r="8" fill="white" stroke="#34485c" stroke-width="2"/>
+    <circle cx="848" cy="320" r="3" fill="#34485c"/>
+    <text x="695" y="374" font-size="17">+z points out of the page.</text>
+    <text x="695" y="405" font-size="17">Positive shaft rotation is counterclockwise</text>
+    <text x="695" y="429" font-size="17">in this view (+x toward +y).</text>
+    <text x="45" y="510" font-size="16">In the side view, +x points into the page (⊗). Marker labels give (x, y, z) in mm.</text>
+    <text x="45" y="536" font-size="16">The origin is where the shaft centreline crosses the nominal needle line. The +d arrow shows the insertion direction.</text>
+    <rect x="44" y="565" width="992" height="105" rx="9" fill="#edf5f3"/>
+    <text x="63" y="596" font-size="21" font-weight="bold">Transform direction: MRI → robot</text>
+    <text x="63" y="625" font-size="18">p_robot = F_robot←MRI p_MRI, using homogeneous column vectors [x, y, z, 1]ᵀ.</text>
+    <text x="63" y="651" font-size="16">In the ideal aligned home case, the two frames coincide and the 4 × 4 transform is the identity.</text>
+    <text x="45" y="698" font-size="14" fill="#4a6173">CISC/CMPE 330  ·  Robot kinematics and end-effector design, assignment pp. 1–2. Joint signs are shared team conventions.</text>
+  </g>
+</svg>
